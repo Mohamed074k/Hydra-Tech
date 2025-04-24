@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYDRA - Software Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="logo-container">
+                <div class="circle"></div>
+                <img src="images/logo.png" alt="HYDRA Logo" class="preloader-logo">
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="percentage">0%</div>
+        </div>
+    </div>
+    <div class="lightning-cursor"></div>
+    
+    <!-- Navigation -->
+    <div class="nav-logo">
+        <img src="images/logo.png" alt="HYDRA Logo">
+    </div>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#team">Our team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+ 
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Powering Ideas Into Digital Reality</h1>
+                <p>Our custom web and app development services are designed to solve real problems. Let's build tech that works for your future.</p>
+                <a href="#contact" class="cta-button" data-aos="fade-right" data-aos-duration="300">Get Started</a>
+                <div class="hero-social-links" data-aos="fade-right" data-aos-duration="300">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-illustration" data-aos="fade-left" data-aos-duration="1000">
+                <img src="images/Programming-amico.svg" alt="Hero Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="300">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="300">
+                    <i class="fas fa-code" ></i>
+                    <h3 >Custom Software Development</h3>
+                    <p>Tailored solutions designed to meet your specific business needs and challenges.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-duration="300">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 >Mobile App Development</h3>
+                    <p >Native and cross-platform mobile applications for iOS and Android.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-duration="300">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and services to power your business.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-duration="300">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful and intuitive user interfaces that enhance user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title">About Us</h2>
+                <p>Founded in 2025, Hydratech is a modern software company specializing in custom website and mobile app development. We're a team of passionate designers, developers, and problem-solvers committed to helping businesses thrive in the digital world. With a focus on clean code, smart design, and seamless user experiences, we turn ideas into powerful digital products that drive real results.</p>
+                <div class="stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="counter" data-target="100">0</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="counter" data-target="24">0</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="300">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/mo-ibrahim.jpg" alt="Team Member">
+                    </div>
+                    <h3>Mohamed Ibrahim</h3>
+                    <p class="job-title">Founder & Back-end developer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/fouad.jpg" alt="Team Member">
+                    </div>
+                    <h3>Mohamed Fouad</h3>
+                    <p class="job-title">Back-end developer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/kh-omar.jpg" alt="Team Member">
+                    </div>
+                    <h3>Khalid Mohamed</h3>
+                    <p class="job-title">Flutter Developer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/Mohamed.jpg" alt="Team Member">
+                    </div>
+                    <h3>Mohamed Elsayed</h3>
+                    <p class="job-title">Front end Developer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/hafez.jpg" alt="Team Member">
+                    </div>
+                    <h3>Ahmed Hafez Ibrahim</h3>
+                    <p class="job-title">.Net Web Developer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                    </div>
+                    <h3>Mohamed <br>Samy</h3>
+                    <p class="job-title">Front end Developer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="images/3bdelkader.jpg" alt="Team Member">
+                    </div>
+                    <h3>Abdelkader Saadallah</h3>
+                    <p class="job-title">Front end Developer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo">
+                        <img src="https://via.placeholder.com/150" alt="Team Member">
+                    </div>
+                    <h3>Mohamed Aboelghet</h3>
+                    <p class="job-title">CEO & Founder</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="300">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-illustration" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="images/Online world-amico.svg" alt="Hero Illustration">
+                </div>
+                <form class="contact-form" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Project Type</option>
+                            <option value="web">Web Development</option>
+                            <option value="mobile">Mobile App</option>
+                            <option value="cloud">Cloud Solutions</option>
+                            <option value="design">UI/UX Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <div class="confirmation-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for contacting us. We'll get back to you soon.</p>
+                    </div>
+                </form>
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="300">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>hydratechegy@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="https://wa.me/201093151669" target="_blank" rel="noopener noreferrer">01093151669</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Kafr elsheikh, Egypt</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+<img src="images/logo.png" alt="">                    <p>Innovative Software Solutions</p>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> HYDRA. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800, // Animation duration
+        easing: 'ease-in-out', // Easing type
+        once: false, // Whether animation should happen only once
+        mirror: true, // Whether elements should animate out while scrolling past them
+        offset: 100, // Offset (in px) from the original trigger point
+      });
+      
+    </script>
+    </body>
+</html> 
