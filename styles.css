@@ -31,6 +31,9 @@ body{
     --text-color: #ffffff;
     --light-text: rgba(255, 255, 255, 0.9);
     --background: linear-gradient(135deg, #000e2b, #01a4cd, #004378);
+    /* --background: linear-gradient(135deg, #000000 0%, #0a0f0a 50%, #001a00 100%); */
+    /* --background: linear-gradient(135deg, #001100 0%, #002200 100%); */
+
     --light-background: rgba(255, 255, 255, 0.1);
     --border-color: rgba(255, 255, 255, 0.2);
 }
@@ -727,46 +730,300 @@ body{
     color: var(--light-text);
 }
 
+/* Enhanced Form Styles */
 .form-group {
     margin-bottom: 1.5rem;
+    position: relative;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
+    padding: 1rem 1.2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
     font-family: inherit;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(2, 161, 203, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
 }
 
 .form-group textarea {
     height: 150px;
     resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
 }
 
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    padding-right: 3rem;
+}
+
+.form-group select option {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+/* Enhanced Submit Button */
 .submit-button {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
     border: none;
-    border-radius: 5px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: 0.5s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
- 
 
-.submit-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(2, 161, 203, 0.4);
+.submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
 }
 
 .submit-button:hover::before {
     left: 100%;
 }
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(2, 161, 203, 0.3);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.submit-button:active {
+    transform: translateY(-1px);
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 161, 203, 0.3);
+}
+
+/* Enhanced Newsletter Form */
+.newsletter-form {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(2, 161, 203, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.newsletter-form input:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.newsletter-form button:hover::before {
+    left: 100%;
+}
+
+.newsletter-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(2, 161, 203, 0.3);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.newsletter-form button:active {
+    transform: translateY(0);
+}
+
+.newsletter-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 161, 203, 0.3);
+}
+
+/* Form Validation Styles */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #ff4757;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.2);
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-color: #2ed573;
+    box-shadow: 0 0 0 3px rgba(46, 213, 115, 0.2);
+}
+
+/* Floating Label Effect */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background: var(--background);
+    padding: 0 0.5rem;
+    border-radius: 4px;
+}
+
+/* Responsive Form Styles */
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.9rem 1rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    .submit-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Form Animation */
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    animation: formSlideIn 0.6s ease forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.submit-button { animation-delay: 0.5s; }
 
 .contact-info {
     display: flex;
@@ -896,31 +1153,7 @@ footer::before {
     color: var(--primary-color);
 }
 
-.newsletter-form {
-    display: flex;
-    gap: 0.5rem;
-}
 
-.newsletter-form input {
-    flex: 1;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-}
-form input:focus, textarea {
-    outline: none;
-     border-color: #0191b5;
-    box-shadow: 0 0 8px rgba(7, 106, 236, 0.3);
-}
-
-.newsletter-form button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .footer-bottom {
     position: relative;
@@ -1658,7 +1891,7 @@ form input:focus, textarea {
 }
 
 /* Lightning Cursor */
-.lightning-cursor {
+/* .lightning-cursor {
     position: fixed;
     width: 20px;
     height: 20px;
@@ -1672,9 +1905,9 @@ form input:focus, textarea {
     animation: pulse 1.5s infinite;
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
-}
+} */
 
-.lightning-cursor::before {
+/* .lightning-cursor::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -1694,7 +1927,7 @@ form input:focus, textarea {
     border-radius: 50%;
     filter: blur(10px);
     animation: rotate 3s linear infinite reverse;
-}
+} */
 
 @keyframes pulse {
     0% {
@@ -1721,9 +1954,9 @@ form input:focus, textarea {
 }
 
 /* Hide default cursor */
-* {
+/* * {
     cursor: none !important;
-}
+} */
 
 /* Show default cursor and hide lightning cursor on smaller screens */
 @media screen and (max-width: 1000px) {
@@ -1753,5 +1986,152 @@ form input:focus, textarea {
     100% {
         transform: translateY(0px);
     }
+}
+
+/* Additional Form Enhancements */
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Loading state for submit button */
+.submit-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.submit-button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success and error states */
+.form-group.success input,
+.form-group.success textarea {
+    border-color: #2ed573;
+    box-shadow: 0 0 0 3px rgba(46, 213, 115, 0.2);
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #ff4757;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.2);
+}
+
+.form-group.success::after,
+.form-group.error::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-group.success::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%232ed573' viewBox='0 0 20 20'%3e%3cpath d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+.form-group.error::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff4757' viewBox='0 0 20 20'%3e%3cpath d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z'/%3e%3c/svg%3e");
+}
+
+/* Enhanced focus ring for accessibility */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar for textarea */
+.form-group textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group textarea::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Enhanced placeholder animation */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    transform: translateX(10px);
+    opacity: 0.7;
+}
+
+/* Hover effects for form elements */
+.form-group:hover input,
+.form-group:hover select,
+.form-group:hover textarea {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced select dropdown styling */
+.form-group select:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Form group spacing improvements */
+.form-group + .form-group {
+    margin-top: 1.8rem;
+}
+
+/* Enhanced button states */
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-button:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Newsletter form enhancements */
+.newsletter-form input:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.newsletter-form button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
